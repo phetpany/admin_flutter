@@ -138,6 +138,7 @@ class _BustypeViewState extends State<BustypeView> {
                                 ),
                                 PopupMenuItem(
                                   value: 2,
+                                  //editting
                                   child: ListTile(
                                     onTap: () => firestoreservice.deleteBus(docID),
                                     leading: Icon(
@@ -194,6 +195,7 @@ class _BustypeViewState extends State<BustypeView> {
           ),
           actions: [
             ElevatedButton(
+              //ປຸ່ມບັນທຶກດຶງຈາກstatecrud.dart
               onPressed: () {
                if(docID == null){
                  firestoreservice.addBus(textController.text);

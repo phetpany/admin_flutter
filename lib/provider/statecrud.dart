@@ -7,7 +7,7 @@ class FirestoreService {
   Future<void> addBus(String name) {
     return buss.add({
       'name': name,
-      'Timestamp': Timestamp.now(), // แก้ไขการสะกดคำ
+      'Timestamp': Timestamp.now(), 
     });
   }
 
@@ -16,7 +16,7 @@ class FirestoreService {
     final busStream= buss.orderBy('Timestamp', 
     descending: true).snapshots(); 
     
-    // แก้ไขการใช้ orderBy และเพิ่ม .snapshots()
+    
    return busStream;
   }
  Future<void> updateBus(String docID,String newBus){
