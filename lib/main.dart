@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_admin/app/modules/login/onboarding/onboarding_screen.dart';
 import 'package:flutter_admin/firebase_options.dart';
@@ -29,14 +31,26 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      localizationsDelegates: const [
+      localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        // เพิ่ม Localizations เพิ่มเติมตามความเหมาะสม
       ],
-      supportedLocales: const [
-        Locale('lo', 'LA'),
-        Locale('en'),
+      supportedLocales: [
+        const Locale('en', 'US'), // ภาษาอังกฤษ
+        const Locale('lo', 'LA'), // ภาษาลาว
+        // เพิ่ม Locale เพิ่มเติมตามความเหมาะสม
       ],
+
+
+      // localizationsDelegates: const [
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      // ],
+      // supportedLocales: const [
+      //   Locale('lo', 'LA'),
+      //   Locale('en'),
+      // ],
       home: const OnboardingScreen(),
     );
   }
