@@ -12,7 +12,7 @@ class FirestoreService {
   }
 
   Stream<QuerySnapshot> getBusStream() {
-    // ปรับให้เรียงลำดับตาม Timestamp หรือ name ตามที่คุณต้องการ
+    
     final busStream= buss.orderBy('Timestamp', 
     descending: true).snapshots(); 
     
